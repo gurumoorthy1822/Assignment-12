@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("....Arithmatic...")
+        const a=17, b=5;
+
+        console.log("sum:",a + b);
+        console.log("Difference:",a - b);
+        console.log("product:",a * b);
+        console.log("Quotient:",a / b);
+        console.log("Remaitnder:",a % b);
+
+        console.log("....Assignment...")
+         let value=10;
+            console.log (value += 5);
+            console.log (value -= 3);
+            console.log(value *= 2);
+            console.log(value /= 4);
+            console.log("Final value:", value);
+
+            console.log("....comparison....");
+            const x=8,y=12;
+            console.log("Equal (==):",x==y);
+            console.log("Strictly equal(===):",x===y);
+            console.log("x>y:",x>y);
+            console.log("x<=y:",x<=y);
+
+            console.log("....Logical....");
+            const p=true,s=false;
+            console.log("Both true (&&):",p&&s);
+            console.log("At least one true(||):",p||s);
+    
+
+            console.log("Even or Odd");
+            const num=7;
+            console.log(num +" is " + (num% 2==0? "Even":"Odd"));
+
+            console.log("..... Grade Evaluation ....");
+            function getGrade(marks) {
+            if (marks < 0 || marks > 100) return "Invalid marks";
+            if (marks >= 90 && marks <= 100) return "A";
+            if (marks >= 75 && marks <= 89) return "B";
+            if (marks >= 50 && marks <= 74) return "C";
+            return "Fail";
+            }
+            [95, 80, 60, 30, 120].forEach(m => console.log(m, "->", getGrade(m)));
+
+
+             console.log("...... Login Validation ....");
+             const storedUser = "admin";
+             const storedPass = "pass123";
+             function login(inputUser, inputPass) {
+             if (inputUser === storedUser && inputPass === storedPass) {
+             console.log("Login successful. Welcome, " + inputUser + "!");
+             } else {
+              console.log("Login failed. Invalid username or password.");
+             }
+            }
+            login("admin", "pass123");
+             login("admin", "wrong");
+
+             console.log("...... Discount Eligibility .....");
+             function checkDiscount(amount, isPremium) {
+                return amount > 5000 && isPremium ? "Discount Applied" : "No Discount";
+             
+             }
+               console.log(checkDiscount(6000, true));  
+              console.log(checkDiscount(6000, false));  
+              console.log(checkDiscount(4000, true));
+
+              console.log("...Electricity Bill...");
+             function calculateBill(units) {
+             let bill;
+            if (units <= 100) {
+            bill = units * 5;
+            } else if (units <= 200) {
+            bill = (100 * 5) + (units - 100) * 7;
+            } else {
+            bill = (100 * 5) + (100 * 7) + (units - 200) * 10;
+            }
+            return bill;
+            }
+             [80, 150, 250].forEach(u => console.log(u + " units -> Rs." + calculateBill(u)));
+    </script>
+</body>
+</html>
